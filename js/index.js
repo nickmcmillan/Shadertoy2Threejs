@@ -196,8 +196,8 @@ void main()
 {
     float time = floor(iTime * 16.0) / 16.0;
     vec2 uv = vUv;
-    uv += vec2(triangle(uv.y * rand(time) * 1.0) * rand(time * 1.9) * 0.005,
-            triangle(uv.x * rand(time * 3.4) * 1.0) * rand(time * 2.1) * 0.005);
+    // uv += vec2(triangle(uv.y * rand(time) * 1.0) * rand(time * 1.9) * 0.005,
+    //         triangle(uv.x * rand(time * 3.4) * 1.0) * rand(time * 2.1) * 0.005);
 
     float noise = (texture2D(tNoise, uv * 0.5).r - 0.5) * NoiseAmount;
     vec2 uvs[3];
